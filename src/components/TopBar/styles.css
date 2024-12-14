@@ -1,0 +1,6 @@
+.header-area {
+  width: 100vw;
+  min-width: 375px;
+  padding: 24px 20px;
+  position: fixed;
+}

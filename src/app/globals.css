@@ -1,0 +1,49 @@
+:root {
+  --white900: rgba(255, 255, 255, 1);
+
+  --black900: rgba(0, 0, 0, 1);
+  --black800: rgba(0, 0, 0, 0.87);
+  --black600: rgba(0, 0, 0, 0.6);
+
+  --gray500: rgba(145, 158, 171, 1);
+  --blue800: rgba(0, 68, 144, 1);
+  --red900: rgba(255, 49, 52, 1);
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--black900);
+  background: var(--white900);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  margin-top: 92px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
