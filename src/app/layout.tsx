@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Public_Sans } from 'next/font/google';
 
 import TopBar from 'src/components/TopBar';
+import BottomBar from 'src/components/BottomBar';
 
 import './globals.css';
 
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className={publicSans.className}>
         <TopBar />
         <main>{children}</main>
+        <BottomBar />
       </body>
     </html>
   );
