@@ -1,18 +1,11 @@
-import { PrismaClient } from '@prisma/client';
+import { getMenuItems } from 'src/api/getMenuItens';
 
 import HomeMenu from 'src/components/HomeMenu';
 
 import './styles.css';
 
-export async function getItems() {
-  const prisma = new PrismaClient();
-  const menuItems = await prisma.menuItems.findMany();
-
-  return menuItems;
-}
-
 export default async function Home() {
-  const menuItems = await getItems();
+  const menuItems = await getMenuItems();
   return (
     <main className="home-main-area">
       <div className="container">

@@ -19,7 +19,7 @@ export default function HomeMenu({ menuItems }: HomeMenuProps) {
     <div className="grid-menu">
       {menuItems.map((item) => (
         <div key={item.id} className="grid-item">
-          <Link href={item.ref} passHref prefetch={false}>
+          <Link href={item.ref} passHref>
             <div
               className="item-area"
               style={{ color: item.textColor, background: item.backgroundColor }}

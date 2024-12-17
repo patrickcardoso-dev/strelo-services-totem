@@ -5,7 +5,7 @@ import IconButton from '@mui/material/IconButton';
 
 export default function GoToHomeButton() {
   return (
-    <Link href="/" passHref prefetch={false}>
+    <Link href="/" passHref>
       <IconButton sx={{ boxShadow: 1 }}>
         <HomeIcon />
       </IconButton>
