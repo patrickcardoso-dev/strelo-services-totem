@@ -1,0 +1,5 @@
+.iframe-area {
+  width: 100%;
+  height: calc(100vh - 92px - 90px);
+  overflow: hidden;
+}
