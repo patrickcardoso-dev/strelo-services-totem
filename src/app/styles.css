@@ -1,0 +1,25 @@
+.home-main-area {
+  display: flex;
+  align-items: center;
+
+  height: calc(100vh - 92px - 88px);
+  background: var(--gray300);
+  padding: 80px 16px;
+}
+
+.home-title {
+  margin-bottom: 4px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 110%;
+  text-align: center;
+}
+
+.home-subtitle {
+  margin-bottom: 32px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 110%;
+  text-align: center;
+  color: var(--black600);
+}

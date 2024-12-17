@@ -4,6 +4,7 @@
   padding: 24px 20px;
   position: fixed;
   bottom: 0;
+  background: var(--white900);
 }
 
 .buttons-div {

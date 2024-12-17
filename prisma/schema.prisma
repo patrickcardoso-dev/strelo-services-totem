@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model MenuItems {
+  id              String @id @default(auto()) @map("_id") @db.ObjectId
+  label           String
+  ref             String
+  icon            String
+  backgroundColor String
+  textColor       String
+
+  @@map("menu_items")
+}

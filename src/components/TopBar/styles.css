@@ -3,4 +3,5 @@
   min-width: 375px;
   padding: 24px 20px;
   position: fixed;
+  background: var(--white900);
 }
