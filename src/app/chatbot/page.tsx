@@ -7,7 +7,7 @@ import './styles.css';
 export default async function Chatbot() {
   const menuItems = await getMenuItems();
   return (
-    <>
+    <main>
       <NavigationHeader menuItems={menuItems} />
       <div className="container iframe-area">
         <iframe
@@ -18,6 +18,6 @@ export default async function Chatbot() {
           height="100%"
         />
       </div>
-    </>
+    </main>
   );
 }
