@@ -1,0 +1,44 @@
+.table-form-area {
+  width: 100%;
+  padding: 40px 10px 10px;
+}
+
+.table-search-input {
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+.table-area {
+  padding: 0 10px 10px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  font-size: 14px;
+}
+
+.table-head {
+  background: var(--gray300);
+  color: var(--blue800);
+}
+
+.flight-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-button {
+  background: var(--blue800);
+  color: var(--white900);
+  font-size: 12px;
+  text-transform: lowercase;
+}
+
+.red {
+  color: var(--red900);
+}
+
+@media (max-width: 375px) {
+  .table-area {
+    max-width: 375px;
+  }
+}
