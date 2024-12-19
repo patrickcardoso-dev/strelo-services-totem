@@ -6,3 +6,16 @@ export async function getRestaurantsList() {
 
   return restaurantsList;
 }
+
+export async function getServicesList() {
+  const prisma = new PrismaClient();
+  const servicesList = await prisma.entities.findMany({
+    where: {
+      segments: {
+        in: ['STORE', 'SERVICE'],
+      },
+    },
+  });
+
+  return servicesList;
+}
