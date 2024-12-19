@@ -17,3 +17,22 @@ model MenuItems {
 
   @@map("menu_items")
 }
+
+model Entities {
+    id                String @id @default(auto()) @map("_id") @db.ObjectId
+    name              String
+    logo              String
+    segments          Segment
+    serviceCategories String[]
+    address           String
+    openingHours      String
+    phone             String
+
+  @@map("entities")
+}
+
+enum Segment {
+  RESTAURANT
+  STORE
+  SERVICE
+} 
