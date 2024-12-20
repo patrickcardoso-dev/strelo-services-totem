@@ -4,7 +4,7 @@
 
   height: calc(100vh - 92px - 88px);
   background: var(--gray300);
-  padding: 80px 16px;
+  padding: 64px 16px;
 }
 
 .home-title {

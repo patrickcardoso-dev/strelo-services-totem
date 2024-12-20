@@ -187,13 +187,17 @@ export default function FlightsTable() {
                         <Image src={row.flight[2]} alt={row.flight[1]} width={36} height={12} />
                       </div>
                     </TableCell>
-                    <TableCell className={row.status === 'Atrasado' ? 'red' : ''}>
+                    <TableCell sx={{ color: row.status === 'Atrasado' ? 'var(--red900)' : '' }}>
                       {row.status}
                     </TableCell>
                     <TableCell>{row.gate}</TableCell>
                     <TableCell>
                       <Link href={row.link} passHref>
-                        <Button variant="contained" className="table-button">
+                        <Button
+                          variant="contained"
+                          className="table-button"
+                          sx={{ textTransform: 'none' }}
+                        >
                           Ver no mapa
                         </Button>
                       </Link>

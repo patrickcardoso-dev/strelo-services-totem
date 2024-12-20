@@ -32,11 +32,6 @@
   background: var(--blue800);
   color: var(--white900);
   font-size: 12px;
-  text-transform: none;
-}
-
-.red {
-  color: var(--red900);
 }
 
 @media (max-width: 375px) {

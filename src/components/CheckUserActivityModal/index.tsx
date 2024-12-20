@@ -93,8 +93,14 @@ export default function CheckUserActivityModal() {
           Em 5 segundos, você será redirecionado para o início.
         </DialogContentText>
       </DialogContent>
-      <DialogActions className="button-div">
-        <Button onClick={() => handleClose()} autoFocus variant="contained" color="info">
+      <DialogActions>
+        <Button
+          onClick={() => handleClose()}
+          autoFocus
+          variant="contained"
+          color="info"
+          sx={{ textTransform: 'none' }}
+        >
           Continuar aqui
         </Button>
       </DialogActions>
