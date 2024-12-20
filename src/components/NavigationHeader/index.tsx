@@ -26,14 +26,12 @@ export default function NavigationHeader({ menuItems }: NavigationHeaderProps) {
 
   return (
     <div className="navigation-header-area" style={{ background: currentPage?.backgroundColor }}>
-      <div className="container">
-        <div className="navigation-header-content">
-          <IconButton onClick={() => router.back()}>
-            <NavigateBeforeIcon className="navigation-icon" />
-          </IconButton>
+      <div className="navigation-header-content">
+        <IconButton onClick={() => router.back()}>
+          <NavigateBeforeIcon className="navigation-icon" />
+        </IconButton>
 
-          <span>{currentPage?.label}</span>
-        </div>
+        <span>{currentPage?.label}</span>
       </div>
     </div>
   );

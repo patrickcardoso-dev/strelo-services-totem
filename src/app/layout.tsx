@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={publicSans.className}>
         <TopBar />
-        <main>{children}</main>
+        {children}
         <BottomBar />
       </body>
     </html>

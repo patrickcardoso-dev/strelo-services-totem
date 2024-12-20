@@ -139,7 +139,7 @@ export default function FlightsTable() {
   };
 
   return (
-    <>
+    <div className="container-area">
       <FormControl variant="outlined" className="table-form-area">
         <OutlinedInput
           id="outlined-adornment-weight"
@@ -215,6 +215,6 @@ export default function FlightsTable() {
           />
         </Paper>
       </div>
-    </>
+    </div>
   );
 }

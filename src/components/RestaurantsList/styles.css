@@ -1,6 +1,9 @@
+.container-area {
+  padding: 40px 10px 10px;
+}
+
 .list-form-area {
   width: 100%;
-  padding: 40px 10px 10px;
 }
 
 .list-search-input {
@@ -9,7 +12,6 @@
 }
 
 .list-area {
-  padding: 0 10px 10px;
   width: 100%;
   max-width: 100%;
   overflow: auto;

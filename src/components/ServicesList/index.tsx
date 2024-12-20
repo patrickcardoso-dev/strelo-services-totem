@@ -11,7 +11,6 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemButton from '@mui/material/ListItemButton';
 import { FormControl, ToggleButton, OutlinedInput, InputAdornment } from '@mui/material';
 
-import { generateSlug } from 'src/utils/generateSlug';
 import { standardizeString } from 'src/utils/standardizeString';
 
 import './styles.css';
@@ -21,8 +20,9 @@ interface ServicesListProps {
     address: string;
     id: string;
     name: string;
+    slug: string;
     logo: string;
-    segments: string;
+    segment: string;
     serviceCategories: string[];
     openingHours: string;
     phone: string;
@@ -31,11 +31,11 @@ interface ServicesListProps {
 
 export default function ServicesList({ servicesList }: ServicesListProps) {
   const filteredStoresList = useMemo(
-    () => servicesList.filter((service) => service.segments === 'STORE'),
+    () => servicesList.filter((service) => service.segment === 'STORE'),
     [servicesList]
   );
   const filteredServicesList = useMemo(
-    () => servicesList.filter((service) => service.segments === 'SERVICE'),
+    () => servicesList.filter((service) => service.segment === 'SERVICE'),
     [servicesList]
   );
 
@@ -75,7 +75,7 @@ export default function ServicesList({ servicesList }: ServicesListProps) {
   }, [filteredServicesList, filteredStoresList, selectedViewOption]);
 
   return (
-    <>
+    <div className="container-area">
       <div className="toggle-button-area">
         <ToggleButton
           color="primary"
@@ -123,7 +123,7 @@ export default function ServicesList({ servicesList }: ServicesListProps) {
             <List>
               {displayedList.map((service) => (
                 <ListItem key={service.id} disablePadding className="list-item-area">
-                  <ListItemButton href={`/services/${generateSlug(service.name)}`}>
+                  <ListItemButton href={`/services/${service.slug}`}>
                     <Image
                       src={service.logo}
                       alt={service.name}
@@ -142,6 +142,6 @@ export default function ServicesList({ servicesList }: ServicesListProps) {
           </nav>
         </Box>
       </div>
-    </>
+    </div>
   );
 }

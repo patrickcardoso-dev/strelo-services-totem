@@ -11,7 +11,6 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemButton from '@mui/material/ListItemButton';
 import { FormControl, OutlinedInput, InputAdornment } from '@mui/material';
 
-import { generateSlug } from 'src/utils/generateSlug';
 import { standardizeString } from 'src/utils/standardizeString';
 
 import './styles.css';
@@ -21,8 +20,9 @@ interface RestaurantsListProps {
     address: string;
     id: string;
     name: string;
+    slug: string;
     logo: string;
-    segments: string;
+    segment: string;
     serviceCategories: string[];
     openingHours: string;
     phone: string;
@@ -53,7 +53,7 @@ export default function RestaurantsList({ restaurantsList }: RestaurantsListProp
   };
 
   return (
-    <>
+    <div className="container-area">
       <FormControl variant="outlined" className="list-form-area">
         <OutlinedInput
           id="outlined-adornment-weight"
@@ -78,7 +78,7 @@ export default function RestaurantsList({ restaurantsList }: RestaurantsListProp
             <List>
               {restaurants.map((restaurant) => (
                 <ListItem key={restaurant.id} disablePadding className="list-item-area">
-                  <ListItemButton href={`/restaurant/${generateSlug(restaurant.name)}`}>
+                  <ListItemButton href={`/restaurants/${restaurant.slug}`}>
                     <Image
                       src={restaurant.logo}
                       alt={restaurant.name}
@@ -99,6 +99,6 @@ export default function RestaurantsList({ restaurantsList }: RestaurantsListProp
           </nav>
         </Box>
       </div>
-    </>
+    </div>
   );
 }
