@@ -4,6 +4,7 @@
 
 .toggle-button-area {
   display: flex;
+  padding: 0 10px;
   gap: 10px;
 }
 
