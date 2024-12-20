@@ -3,6 +3,7 @@ import { Public_Sans } from 'next/font/google';
 
 import TopBar from 'src/components/TopBar';
 import BottomBar from 'src/components/BottomBar';
+import CheckUserActivityModal from 'src/components/CheckUserActivityModal';
 
 import './globals.css';
 
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={publicSans.className}>
+        <CheckUserActivityModal />
         <TopBar />
         {children}
         <BottomBar />

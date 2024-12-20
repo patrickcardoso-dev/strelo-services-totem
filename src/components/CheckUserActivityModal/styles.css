@@ -1,0 +1,14 @@
+.modal-content h2 {
+  padding-top: 24px;
+  font-weight: 700;
+}
+
+.button-div {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 24px;
+}
+
+.button-div button {
+  text-transform: none;
+}
